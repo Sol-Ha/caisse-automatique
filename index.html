@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" async></script>
+    <title>Automatic cashier</title>
+</head>
+
+<body>
+    <header>
+        <h1>Scan your articles</h1>
+        <h2>This machine returns bills of: <br>
+            10 euro 5 euro and 1 euro</h2>
+    </header>
+    <main>
+        <article class="ticket">
+            <label for="text">Scan your articles</label>
+            <input type="number" name="price" id="newItem">
+            <button type="button" id="btnA">Enter</button>
+        </article>
+        <article class="bill">
+            <h3>ticket</h3>
+            <ul>
+                <li>item 1: 12€</li>
+                <li>item 2: 10€</li>
+                <li>item 3: 18€</li>
+            </ul>
+            <h3>total amount:</h3>
+            <p id="amountToPay"></p>
+            <h3>total paid:</h3>
+            <p id="totalDisplay"></p>
+        </article>
+        <article class="ticket">
+            <label for="text">Insert your money</label>
+            <input type="number" name="payment" id="payment">
+            <button type="button" id="btnB">Enter</button>
+        </article>
+        <footer>
+            <h2 id="ifOk"></h2>
+            <h2 id="ifNeeded"></h2>
+            <!-- if money needs to be return -->
+            <div id="display_money">
+            <div class="display_money_div">
+                <button disabled="disabled" class="print_money">10€</button> 
+                <p id="ten"></p>
+            </div>
+            <div class="display_money_div">
+                <button disabled="disabled" class="print_money">5€</button> 
+                <p id="five"></p>
+            </div>
+            <div class="display_money_div">
+                <button disabled="disabled" class="print_money">1€</button> 
+                <p id="one"></p>
+            </div>
+        </div>
+        </footer>
+    </main>
+</body>
+
+</html>
